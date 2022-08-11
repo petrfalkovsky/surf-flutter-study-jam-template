@@ -13,12 +13,17 @@ void main() async {
 class MyApp extends StatelessWidget {
   /// Constructor for [MyApp].
   const MyApp({Key? key}) : super(key: key);
+  static const String _title = 'просто войди в Surf Jam детка';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: AuthScreen(
-        authRepository: AuthRepository(StudyJamClient()),
+      title: _title,
+      home: Scaffold(
+        appBar: AppBar(title: const Text(_title)),
+        body: AuthScreen(
+          authRepository: AuthRepository(StudyJamClient()),
+        ),
       ),
     );
   }

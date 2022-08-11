@@ -3,6 +3,7 @@ import 'package:surf_practice_chat_flutter/features/auth/models/token_dto.dart';
 import 'package:surf_practice_chat_flutter/features/auth/repository/auth_repository.dart';
 import 'package:surf_practice_chat_flutter/features/chat/repository/chat_repository.dart';
 import 'package:surf_practice_chat_flutter/features/chat/screens/chat_screen.dart';
+import 'package:surf_practice_chat_flutter/ui/screens/sign_in_screen.dart';
 import 'package:surf_study_jam/surf_study_jam.dart';
 
 /// Screen for authorization process.
@@ -23,10 +24,9 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
-  // TODO(task): Implement Auth screen.
   @override
   Widget build(BuildContext context) {
-    throw UnimplementedError();
+    return const SignInScreen();
   }
 
   void _pushToChat(BuildContext context, TokenDto token) {
