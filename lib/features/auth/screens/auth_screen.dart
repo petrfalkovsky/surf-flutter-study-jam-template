@@ -28,19 +28,4 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
     return const SignInScreen();
   }
-
-  void _pushToChat(BuildContext context, TokenDto token) {
-    Navigator.push<ChatScreen>(
-      context,
-      MaterialPageRoute(
-        builder: (_) {
-          return ChatScreen(
-            chatRepository: ChatRepository(
-              StudyJamClient().getAuthorizedClient(token.token),
-            ),
-          );
-        },
-      ),
-    );
-  }
 }
